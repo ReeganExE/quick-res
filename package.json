@@ -1,0 +1,52 @@
+{
+  "name": "quick-res",
+  "version": "0.0.8",
+  "description": "A set of small utilities that makes Response. q.json(), q.text(), q.html(), .... can make your code shorter and more readable while also providing good support for Tree-Shaking.",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "ts-node --esm test.ts"
+  },
+  "keywords": [
+    "ninhpham",
+    "ReeganExE",
+    "esbuild",
+    "workers",
+    "deno",
+    "Response"
+  ],
+  "author": "Ninh Pham (ReeganExE)",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "eslint-config-relint-base": "^1.0.1",
+    "typescript": "^5.0.4"
+  },
+  "eslintConfig": {
+    "extends": "relint-base",
+    "ignorePatterns": [
+      "dist",
+      "build"
+    ],
+    "rules": {
+      "import/extensions": "off",
+      "import/no-unresolved": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "semi": true,
+    "tabWidth": 2
+  }
+}

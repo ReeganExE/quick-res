@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2021", "dom"],
+    "outDir": "dist",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "declaration": true,
+    "strict": true
+  },
+  "exclude": ["dist", "node_modules"]
+}
