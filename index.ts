@@ -26,8 +26,9 @@ function constructResp<T extends BodyInit>({ contentType$: contentType, transfro
     const status = status$ ?? arg;
 
     const preparedHeaders = new Headers();
+
     if (headers) {
-      for (const [k, v] of Object.entries(headers as HeadersInit)) {
+      for (const [k, v] of headers instanceof Headers ? headers.entries() : Object.entries(headers as HeadersInit)) {
         if (typeof v === 'string') {
           preparedHeaders.set(k, v);
         } else {

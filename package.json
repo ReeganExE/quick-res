@@ -1,6 +1,6 @@
 {
   "name": "quick-res",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "A set of small utilities that makes Response. q.json(), q.text(), q.html(), .... can make your code shorter and more readable while also providing good support for Tree-Shaking.",
   "exports": {
     ".": {
@@ -48,5 +48,13 @@
     "singleQuote": true,
     "semi": true,
     "tabWidth": 2
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReeganExE/quick-res.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReeganExE/quick-res/issues"
+  },
+  "homepage": "https://github.com/ReeganExE/quick-res#readme"
 }

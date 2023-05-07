@@ -7,7 +7,7 @@ npm install quick-res
 
 - Works fine with any kinds of worker that supports Web Standard API.
 - Supports both CommonJS and ESM.
-- Small! Only 883 bytes (ESM). See [screenshot](#screenshot).
+- Small! Only 922 bytes (ESM). See [screenshot](#screenshot).
 
 ### Usage
 
@@ -88,7 +88,7 @@ export function internalError(error: Error) {
 
 ### Screenshot
 
-Only 883 bytes (ESM)
+Only 922 bytes (ESM)
 
 <img src="https://github.com/ReeganExE/quick-res/blob/main/code.webp?raw=true" alt="small code">
 

@@ -1,6 +1,5 @@
 import * as assert from 'node:assert';
 import { Readable } from 'node:stream';
-
 import test from 'node:test';
 
 import * as quick from './index.ts';
@@ -14,6 +13,16 @@ test('json', async () => {
 test('text', async () => {
   const res = quick.text('Invalid', 400);
   assert.equal(res.headers.get('content-type')?.startsWith('text/plain'), true);
+  assert.equal('Invalid', await res.text());
+  assert.equal(400, res.status);
+});
+
+test('text custom header', async () => {
+  const headers = new Headers();
+  headers.set('test-header', 'just');
+  const res = quick.text('Invalid', 400, headers);
+  assert.equal(res.headers.get('content-type')?.startsWith('text/plain'), true);
+  assert.equal(res.headers.get('test-header'), 'just');
   assert.equal('Invalid', await res.text());
   assert.equal(400, res.status);
 });
