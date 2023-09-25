@@ -1,6 +1,6 @@
 {
   "name": "quick-res",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A set of small utilities that makes Response. q.json(), q.text(), q.html(), .... can make your code shorter and more readable while also providing good support for Tree-Shaking.",
   "exports": {
     ".": {

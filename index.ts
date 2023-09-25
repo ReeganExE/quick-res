@@ -1,5 +1,5 @@
 interface CreateResponse<T = unknown> {
-  (data: T | null, status?: number, headers?: HeadersInit): Response;
+  (data: T | null, /** Status code. Defaults to 200. */ status?: number, headers?: HeadersInit): Response;
   (data: T | null, init?: ResponseInit): Response;
 }
 
@@ -23,7 +23,7 @@ function constructResp<T extends BodyInit>({ contentType$: contentType, transfro
       return res;
     }
 
-    const status = status$ ?? arg;
+    const status = status$ ?? arg ?? 200;
 
     const preparedHeaders = new Headers();
 
